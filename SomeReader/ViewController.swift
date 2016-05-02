@@ -15,7 +15,8 @@ class ViewController: UIViewController, NSXMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // テッククランチJPのURLをメモ
+        // http://jp.techcrunch.com/feed/
         let url = NSURL(string: "http://rss.rssad.jp/rss/markezine/new/20/index.xml")
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             if data == nil {
