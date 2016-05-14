@@ -1,15 +1,15 @@
 //
-//  SomeReaderTests.swift
-//  SomeReaderTests
+//  MZReaderTests.swift
+//  MZReaderTests
 //
 //  Created by Hisafumi Kikkawa on 2016/04/30.
 //  Copyright © 2016年 shinjukujohnny. All rights reserved.
 //
 
 import XCTest
-@testable import SomeReader
+@testable import MZReader
 
-class SomeReaderTests: XCTestCase {
+class MZReaderTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

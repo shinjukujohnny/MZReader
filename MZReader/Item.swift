@@ -1,6 +1,6 @@
 //
 //  Item.swift
-//  SomeReader
+//  MZReader
 //
 //  Created by Hisafumi Kikkawa on 2016/05/01.
 //  Copyright © 2016年 shinjukujohnny. All rights reserved.
