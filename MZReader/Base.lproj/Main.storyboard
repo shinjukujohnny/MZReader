@@ -55,5 +55,58 @@
             </objects>
             <point key="canvasLocation" x="305" y="186"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="haJ-WX-5NB">
+            <objects>
+                <viewController id="81t-dO-YA2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PGu-WL-0NW"/>
+                        <viewControllerLayoutGuide type="bottom" id="CCw-3u-95Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KOx-du-NSe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="db8-mj-C3U">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="戻る" id="9Av-YH-7jq">
+                                        <connections>
+                                            <action selector="goBack" destination="dxq-AR-tck" id="Ncs-4U-FFY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2dA-m0-rr7"/>
+                                    <barButtonItem title="進む" id="cpJ-CO-I9t">
+                                        <connections>
+                                            <action selector="goForward" destination="dxq-AR-tck" id="Tbn-Xp-WgL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="i3M-Ta-FZ2"/>
+                                    <barButtonItem systemItem="refresh" id="WCO-Z3-4H9">
+                                        <connections>
+                                            <action selector="reload" destination="dxq-AR-tck" id="J8S-K6-3mu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EKq-uM-R8b"/>
+                                    <barButtonItem title="Item" systemItem="stop" id="O5X-D5-5m4">
+                                        <connections>
+                                            <action selector="stopLoading" destination="dxq-AR-tck" id="4FE-si-bqV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxq-AR-tck">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jf4-nn-Qoj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="186"/>
+        </scene>
     </scenes>
 </document>
