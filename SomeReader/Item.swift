@@ -11,4 +11,6 @@ import Foundation
 class Item {
     var title: String = ""
     var description: String = ""
+    var guid: String = ""
+    var pubDate: String = ""
 }
