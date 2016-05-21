@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		3866F6311CD4E65800D87076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6301CD4E65800D87076 /* AppDelegate.swift */; };
 		3866F6331CD4E65800D87076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6321CD4E65800D87076 /* ViewController.swift */; };
-		3866F6361CD4E65800D87076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3866F6341CD4E65800D87076 /* Main.storyboard */; };
 		3866F6381CD4E65800D87076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3866F6371CD4E65800D87076 /* Assets.xcassets */; };
 		3866F63B1CD4E65800D87076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3866F6391CD4E65800D87076 /* LaunchScreen.storyboard */; };
 		3866F6461CD4E65800D87076 /* MZReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6451CD4E65800D87076 /* MZReaderTests.swift */; };
 		3866F6511CD4E65800D87076 /* MZReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6501CD4E65800D87076 /* MZReaderUITests.swift */; };
 		3866F6791CD514A600D87076 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6781CD514A600D87076 /* Item.swift */; };
+		389C11A41CEFDC8200CB6164 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389C11A31CEFDC8200CB6164 /* WebViewController.swift */; };
+		389C11A51CEFEE3C00CB6164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3866F6341CD4E65800D87076 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		3866F6501CD4E65800D87076 /* MZReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZReaderUITests.swift; sourceTree = "<group>"; };
 		3866F6521CD4E65800D87076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3866F6781CD514A600D87076 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		389C11A31CEFDC8200CB6164 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4419CE4033EF3B7A6236BB89 /* Pods-MZReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZReader/Pods-MZReader.release.xcconfig"; sourceTree = "<group>"; };
 		A2B257AAF048D16C3A6CD5CC /* Pods-MZReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZReader/Pods-MZReader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,11 +110,11 @@
 				3866F6321CD4E65800D87076 /* ViewController.swift */,
 				3866F6781CD514A600D87076 /* Item.swift */,
 				3866F6341CD4E65800D87076 /* Main.storyboard */,
+				389C11A31CEFDC8200CB6164 /* WebViewController.swift */,
 				3866F6371CD4E65800D87076 /* Assets.xcassets */,
 				3866F6391CD4E65800D87076 /* LaunchScreen.storyboard */,
 				3866F63C1CD4E65800D87076 /* Info.plist */,
 			);
-			name = MZReader;
 			path = MZReader;
 			sourceTree = "<group>";
 		};
@@ -122,7 +124,6 @@
 				3866F6451CD4E65800D87076 /* MZReaderTests.swift */,
 				3866F6471CD4E65800D87076 /* Info.plist */,
 			);
-			name = MZReaderTests;
 			path = MZReaderTests;
 			sourceTree = "<group>";
 		};
@@ -132,7 +133,6 @@
 				3866F6501CD4E65800D87076 /* MZReaderUITests.swift */,
 				3866F6521CD4E65800D87076 /* Info.plist */,
 			);
-			name = MZReaderUITests;
 			path = MZReaderUITests;
 			sourceTree = "<group>";
 		};
@@ -257,9 +257,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389C11A51CEFEE3C00CB6164 /* Main.storyboard in Resources */,
 				3866F63B1CD4E65800D87076 /* LaunchScreen.storyboard in Resources */,
 				3866F6381CD4E65800D87076 /* Assets.xcassets in Resources */,
-				3866F6361CD4E65800D87076 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +287,7 @@
 				3866F6331CD4E65800D87076 /* ViewController.swift in Sources */,
 				3866F6791CD514A600D87076 /* Item.swift in Sources */,
 				3866F6311CD4E65800D87076 /* AppDelegate.swift in Sources */,
+				389C11A41CEFDC8200CB6164 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

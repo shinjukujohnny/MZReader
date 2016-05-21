@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSource, UITableViewDelegate {
     
+    // ニュース記事のURLを格納する変数
+    var newsUrl = ""
+    // ニュース記事のタイトルを格納する変数
+    var newsTitle = ""
     var _elementName: String = ""
     var _items: [Item]! = []
     var _item: Item? = nil
@@ -17,6 +21,8 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // ヘッダ部分にタイトルを記載
+        self.title = "MZReader"
         
         //Table ViewのDataSource参照先指定
         table.dataSource = self
@@ -58,7 +64,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
         // タイトル、説明をCellにセット
         cell.textLabel!.text = item.title
         cell.textLabel!.numberOfLines = 3
-        cell.detailTextLabel!.text = item.description
+        //cell.detailTextLabel!.text = item.description
         cell.detailTextLabel!.text = item.pubDate
         return cell
     }
@@ -67,8 +73,22 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let item = _items[indexPath.row]
         // StringをNSURLに変換
-        let url = NSURL(string:item.guid)
-        UIApplication.sharedApplication().openURL(url!)
+        //let url = NSURL(string:item.guid)
+        //UIApplication.sharedApplication().openURL(url!)
+        
+        newsUrl = item.guid
+        newsTitle = (item.title as NSString).substringToIndex(15) + "..."
+        // WebViewController画面へ遷移
+        performSegueWithIdentifier("toWebView", sender: self)
+    }
+    
+    // WebViewControllerへURLデータを渡す
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // セグエ用にダウンキャストしたWebViewControllerのインスタンス
+        let wvc = segue.destinationViewController as! WebViewController
+        // 変数newsUrlの値をWebViewControllerの変数newsUrlに代入
+        wvc.newsUrl = newsUrl
+        wvc.title = newsTitle
     }
     
     // XML解析開始時に実行されるメソッド
