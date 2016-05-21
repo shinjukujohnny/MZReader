@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,40 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zmF-On-xFW">
-                                <rect key="frame" x="0.0" y="0.0" width="377" height="668"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XhQ-bR-qtc">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="668"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Vc-Ti-sFY">
-                                                <rect key="frame" x="0.0" y="0.0" width="377" height="668"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="87" id="TCj-1F-UTx">
-                                                        <rect key="frame" x="0.0" y="92" width="377" height="87"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TCj-1F-UTx" id="9ar-dQ-P9M">
-                                                            <rect key="frame" x="0.0" y="0.0" width="377" height="86"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eCd-X4-IJ6"/>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cIt-jZ-nGO"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="XhQ-bR-qtc" firstAttribute="centerX" secondItem="zmF-On-xFW" secondAttribute="centerX" id="F3e-Ok-efi"/>
-                                    <constraint firstItem="XhQ-bR-qtc" firstAttribute="centerY" secondItem="zmF-On-xFW" secondAttribute="centerY" id="tO1-W6-dgQ"/>
-                                </constraints>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Vc-Ti-sFY">
+                                <rect key="frame" x="-1" y="0.0" width="377" height="668"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="87" id="TCj-1F-UTx">
+                                        <rect key="frame" x="0.0" y="92" width="377" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TCj-1F-UTx" id="9ar-dQ-P9M">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eCd-X4-IJ6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cIt-jZ-nGO"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Vc-Ti-sFY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="1ha-DN-BMz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Vc-Ti-sFY" secondAttribute="bottom" constant="-1" id="PMe-Bv-mxy"/>
+                            <constraint firstItem="5Vc-Ti-sFY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="ccd-J4-PpZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Vc-Ti-sFY" secondAttribute="trailing" constant="-21" id="gP2-S9-hw9"/>
+                            <constraint firstItem="5Vc-Ti-sFY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0O-ih-4UJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oCu-Ka-Ot0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -75,45 +69,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-oI-7zh">
-                                <rect key="frame" x="0.0" y="-3" width="377" height="625"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-oI-7zh">
+                                <rect key="frame" x="0.0" y="-3" width="385" height="669"/>
                                 <subviews>
-                                    <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxq-AR-tck">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="625"/>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxq-AR-tck">
+                                        <rect key="frame" x="0.0" y="0.0" width="385" height="625"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                     </webView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="db8-mj-C3U">
+                                        <rect key="frame" x="0.0" y="625" width="385" height="44"/>
+                                        <items>
+                                            <barButtonItem title="戻る" id="9Av-YH-7jq">
+                                                <connections>
+                                                    <action selector="goBack" destination="dxq-AR-tck" id="Ncs-4U-FFY"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="2dA-m0-rr7"/>
+                                            <barButtonItem title="進む" id="cpJ-CO-I9t">
+                                                <connections>
+                                                    <action selector="goForward" destination="dxq-AR-tck" id="Tbn-Xp-WgL"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="i3M-Ta-FZ2"/>
+                                            <barButtonItem systemItem="refresh" id="WCO-Z3-4H9">
+                                                <connections>
+                                                    <action selector="reload" destination="dxq-AR-tck" id="J8S-K6-3mu"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="EKq-uM-R8b"/>
+                                            <barButtonItem title="Item" systemItem="stop" id="O5X-D5-5m4">
+                                                <connections>
+                                                    <action selector="stopLoading" destination="dxq-AR-tck" id="4FE-si-bqV"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                             </stackView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="db8-mj-C3U">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="戻る" id="9Av-YH-7jq">
-                                        <connections>
-                                            <action selector="goBack" destination="dxq-AR-tck" id="Ncs-4U-FFY"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2dA-m0-rr7"/>
-                                    <barButtonItem title="進む" id="cpJ-CO-I9t">
-                                        <connections>
-                                            <action selector="goForward" destination="dxq-AR-tck" id="Tbn-Xp-WgL"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="i3M-Ta-FZ2"/>
-                                    <barButtonItem systemItem="refresh" id="WCO-Z3-4H9">
-                                        <connections>
-                                            <action selector="reload" destination="dxq-AR-tck" id="J8S-K6-3mu"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EKq-uM-R8b"/>
-                                    <barButtonItem title="Item" systemItem="stop" id="O5X-D5-5m4">
-                                        <connections>
-                                            <action selector="stopLoading" destination="dxq-AR-tck" id="4FE-si-bqV"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vSP-oI-7zh" firstAttribute="top" secondItem="PGu-WL-0NW" secondAttribute="bottom" constant="-67" id="6Cw-Ne-ST0"/>
+                            <constraint firstItem="vSP-oI-7zh" firstAttribute="leading" secondItem="KOx-du-NSe" secondAttribute="leadingMargin" constant="-20" id="FAV-Cc-i1N"/>
+                            <constraint firstItem="CCw-3u-95Z" firstAttribute="top" secondItem="vSP-oI-7zh" secondAttribute="bottom" constant="1" id="OhM-q8-uLk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vSP-oI-7zh" secondAttribute="trailing" constant="-22" id="X66-Iq-yOI"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
