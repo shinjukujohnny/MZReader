@@ -221,13 +221,17 @@
 				TargetAttributes = {
 					3866F62C1CD4E65800D87076 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5429CA762T;
+						LastSwiftMigration = 0800;
 					};
 					3866F6401CD4E65800D87076 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3866F62C1CD4E65800D87076;
 					};
 					3866F64B1CD4E65800D87076 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3866F62C1CD4E65800D87076;
 					};
 				};
@@ -430,10 +434,12 @@
 			baseConfigurationReference = A2B257AAF048D16C3A6CD5CC /* Pods-MZReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5429CA762T;
 				INFOPLIST_FILE = MZReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReader;
 				PRODUCT_NAME = MZReader;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -442,10 +448,12 @@
 			baseConfigurationReference = 4419CE4033EF3B7A6236BB89 /* Pods-MZReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5429CA762T;
 				INFOPLIST_FILE = MZReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReader;
 				PRODUCT_NAME = MZReader;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -457,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderTests;
 				PRODUCT_NAME = MZReader;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZReader.app/MZReader";
 			};
 			name = Debug;
@@ -469,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderTests;
 				PRODUCT_NAME = MZReader;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZReader.app/MZReader";
 			};
 			name = Release;
@@ -480,6 +490,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderUITests;
 				PRODUCT_NAME = MZReader;
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = MZReader;
 			};
 			name = Debug;
@@ -491,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderUITests;
 				PRODUCT_NAME = MZReader;
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = MZReader;
 			};
 			name = Release;
