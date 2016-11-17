@@ -4,7 +4,7 @@
 //
 //  Created by Hisafumi Kikkawa on 2016/05/21.
 //  Copyright © 2016年 shinjukujohnny. All rights reserved.
-//
+//  開発停止中
 
 import UIKit
 
