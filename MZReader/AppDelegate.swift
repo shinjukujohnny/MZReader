@@ -9,9 +9,10 @@
 import UIKit
 import Firebase
 import Google
+import Adjust
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
 
     var window: UIWindow?
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385AB23220EB89F7008DB791 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385AB23120EB89F7008DB791 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		385AB23420EB8A12008DB791 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385AB23320EB8A12008DB791 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		385AB23620EB8A19008DB791 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 385AB23520EB8A19008DB791 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3866F6311CD4E65800D87076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6301CD4E65800D87076 /* AppDelegate.swift */; };
 		3866F6331CD4E65800D87076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6321CD4E65800D87076 /* ViewController.swift */; };
 		3866F6381CD4E65800D87076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3866F6371CD4E65800D87076 /* Assets.xcassets */; };
@@ -45,6 +48,12 @@
 		146165B8B6CA267560D2FB24 /* Pods_MZReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		210CCE20ECC652E8CA30D36B /* Pods-MZReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZReaderTests/Pods-MZReaderTests.release.xcconfig"; sourceTree = "<group>"; };
 		2304964B814D0CA6E23005C9 /* Pods-MZReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReaderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZReaderUITests/Pods-MZReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		385AB23120EB89F7008DB791 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		385AB23320EB8A12008DB791 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		385AB23520EB8A19008DB791 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		385AB23720EB8AA4008DB791 /* MZReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MZReader-Bridging-Header.h"; sourceTree = "<group>"; };
+		385AB23820EB91F9008DB791 /* Adjust */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Adjust; path = Pods/Adjust; sourceTree = "<group>"; };
+		385AB23A20EB9211008DB791 /* Adjust */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Adjust; path = Pods/Adjust/Adjust; sourceTree = "<group>"; };
 		3866F62D1CD4E65800D87076 /* MZReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MZReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3866F6301CD4E65800D87076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3866F6321CD4E65800D87076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385AB23620EB8A19008DB791 /* CoreTelephony.framework in Frameworks */,
+				385AB23420EB8A12008DB791 /* iAd.framework in Frameworks */,
+				385AB23220EB89F7008DB791 /* AdSupport.framework in Frameworks */,
 				389F81BC2046A06B00306DF4 /* Foundation.framework in Frameworks */,
 				5A009DCB1D7AA01A02DF3BCC /* Pods_MZReader.framework in Frameworks */,
 			);
@@ -101,6 +113,7 @@
 		3866F6241CD4E65800D87076 = {
 			isa = PBXGroup;
 			children = (
+				385AB23720EB8AA4008DB791 /* MZReader-Bridging-Header.h */,
 				3866F62F1CD4E65800D87076 /* MZReader */,
 				3866F6441CD4E65800D87076 /* MZReaderTests */,
 				3866F64F1CD4E65800D87076 /* MZReaderUITests */,
@@ -170,6 +183,11 @@
 		CBEFE5128532AC07DCE6E00B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				385AB23820EB91F9008DB791 /* Adjust */,
+				385AB23A20EB9211008DB791 /* Adjust */,
+				385AB23520EB8A19008DB791 /* CoreTelephony.framework */,
+				385AB23320EB8A12008DB791 /* iAd.framework */,
+				385AB23120EB89F7008DB791 /* AdSupport.framework */,
 				389F81BB2046A06B00306DF4 /* Foundation.framework */,
 				146165B8B6CA267560D2FB24 /* Pods_MZReader.framework */,
 				05D610223388B606DA00C0CE /* Pods_MZReaderTests.framework */,
@@ -546,6 +564,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReader;
 				PRODUCT_NAME = MZReader;
+				SWIFT_OBJC_BRIDGING_HEADER = "MZReader-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -560,6 +579,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReader;
 				PRODUCT_NAME = MZReader;
+				SWIFT_OBJC_BRIDGING_HEADER = "MZReader-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
