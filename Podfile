@@ -8,6 +8,7 @@ target 'MZReader' do
   pod 'Google/Analytics'
   pod 'Firebase/Messaging'
   pod 'Firebase/AdMob'
+  pod 'Adjust', '~> 4.14.1'
 
   # Pods for MZReader
 
