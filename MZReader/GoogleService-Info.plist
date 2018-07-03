@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>TRACKING_ID</key>
+	<string>UA-114936367-1</string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>90797557861-2rfsbba9kbpb0aum2bbtvdbb23hek26n.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.90797557861-2rfsbba9kbpb0aum2bbtvdbb23hek26n</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA4mhB9n5YBuprn1A5v2nb-4Crofgez9QU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>90797557861</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.shinjukujohnny.MZReader</string>
+	<key>PROJECT_ID</key>
+	<string>shinjukujohnny</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shinjukujohnny.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:90797557861:ios:9ed546641478deb0</string>
+	<key>DATABASE_URL</key>
+	<string>https://shinjukujohnny.firebaseio.com</string>
+</dict>
+</plist>

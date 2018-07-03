@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAnalytics
+import GoogleMobileAds
 
-class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, XMLParserDelegate, UITableViewDataSource, UITableViewDelegate, GADInterstitialDelegate {
     
     // ニュース記事のURLを格納する変数
     var newsUrl = ""
@@ -19,29 +22,43 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     var _item: Item? = nil
     @IBOutlet var table :UITableView!
     
+    var interstitial: GADInterstitial!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // ヘッダ部分にタイトルを記載
         self.title = "MZReader"
+        
+        // firebaseイベント計測
+        FIRAnalytics.setUserPropertyString("test", forName: "favorite_food")
+        FIRAnalytics.logEvent(withName: "johnny_test", parameters: nil)
+        // 新しいイベントが自動収集されるテスト
+        FIRAnalytics.logEvent(withName: "event_auto_add_test", parameters: nil)
+
+        FIRAnalytics.logEvent(withName: "event_test", parameters: ["key": "キー" as NSObject])
         
         //Table ViewのDataSource参照先指定
         table.dataSource = self
         // Table Viewのタップ時のdelegate先を指定
         table.delegate = self
         
-        let url = NSURL(string: "http://rss.rssad.jp/rss/markezine/new/20/index.xml")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+        let url = URL(string: "http://rss.rssad.jp/rss/markezine/new/20/index.xml")
+        let task = URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
             if data == nil {
                 print("dataTaskWithRequest error: \(error)")
                 return
             }
             
-            let parser = NSXMLParser(data: data!)
+            let parser = XMLParser(data: data!)
             parser.delegate = self
             parser.parse()
-        }
+        }) 
         
         task.resume()
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3553872227246761/3228241644")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,14 +67,14 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     }
     
     // テーブルビューのセルの数をnewsDataArrayに格納しているデータの数で設定
-    func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
+    func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int {
         return _items.count
     }
     
     // セルに表示する内容を設定
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // story boardで設定したCellを取得
-        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         
         // ニュース記事データを取得（配列の"indexPath.row"番目の要素を取得）
         let item = _items[indexPath.row]
@@ -70,34 +87,40 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     }
     
     // テーブルビューのセルがタップされた時の処理を追加
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = _items[indexPath.row]
         // StringをNSURLに変換
         //let url = NSURL(string:item.guid)
         //UIApplication.sharedApplication().openURL(url!)
         
         newsUrl = item.guid
-        newsTitle = (item.title as NSString).substringToIndex(15) + "..."
+        newsTitle = (item.title as NSString).substring(to: 15) + "..."
         // WebViewController画面へ遷移
-        performSegueWithIdentifier("toWebView", sender: self)
+        performSegue(withIdentifier: "toWebView", sender: self)
     }
     
     // WebViewControllerへURLデータを渡す
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if interstitial.isReady {
+            //interstitial.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+
         // セグエ用にダウンキャストしたWebViewControllerのインスタンス
-        let wvc = segue.destinationViewController as! WebViewController
+        let wvc = segue.destination as! WebViewController
         // 変数newsUrlの値をWebViewControllerの変数newsUrlに代入
         wvc.newsUrl = newsUrl
         wvc.title = newsTitle
     }
     
     // XML解析開始時に実行されるメソッド
-    func parserDidStartDocument(parser: NSXMLParser) {
+    func parserDidStartDocument(_ parser: XMLParser) {
         // print("XML解析開始しました")
     }
     
     // 解析中に要素の開始タグがあったときに実行されるメソッド
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         // print("開始タグ:" + elementName)
         _elementName = elementName
         if elementName == "item" {
@@ -107,7 +130,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     }
     
     // 開始タグと終了タグでくくられたデータがあったときに実行されるメソッド
-    func parser(parser: NSXMLParser, foundCharacters chars: String) {
+    func parser(_ parser: XMLParser, foundCharacters chars: String) {
         if _item == nil { return }
         //print(chars)
         //print(_elementName)
@@ -123,7 +146,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     }
     
     // 解析中に要素の終了タグがあったときに実行されるメソッド
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         // print("終了タグ:" + elementName)
         if (elementName == "item" && _item != nil && _item!.title != "" && _item?.description != "") {
             _items!.append(_item!)
@@ -132,7 +155,7 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
     }
     
     // XML解析終了時に実行されるメソッド
-    func parserDidEndDocument(parser: NSXMLParser) {
+    func parserDidEndDocument(_ parser: XMLParser) {
         // print("XML解析終了しました")
         // for Debug
         /*
@@ -145,11 +168,40 @@ class ViewController: UIViewController, NSXMLParserDelegate, UITableViewDataSour
         */
         
         // UIの変更はmain thread で行う
-        dispatch_async(dispatch_get_main_queue(), {
+        DispatchQueue.main.async(execute: {
             self.table.reloadData()
             // print("reload OK")
         })
     }
-
+    /// Tells the delegate an ad request succeeded.
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        print("interstitialWillPresentScreen")
+    }
+    
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialWillDismissScreen")
+    }
+    
+    /// Tells the delegate the interstitial had been animated off the screen.
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialDidDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        print("interstitialWillLeaveApplication")
+    }
 }
 

@@ -16,6 +16,11 @@
 		3866F6791CD514A600D87076 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866F6781CD514A600D87076 /* Item.swift */; };
 		389C11A41CEFDC8200CB6164 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389C11A31CEFDC8200CB6164 /* WebViewController.swift */; };
 		389C11A51CEFEE3C00CB6164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3866F6341CD4E65800D87076 /* Main.storyboard */; };
+		389F81BC2046A06B00306DF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389F81BB2046A06B00306DF4 /* Foundation.framework */; };
+		389F81C420479CE400306DF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 389F81C320479CE400306DF4 /* GoogleService-Info.plist */; };
+		5A009DCB1D7AA01A02DF3BCC /* Pods_MZReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146165B8B6CA267560D2FB24 /* Pods_MZReader.framework */; };
+		AA129E513593685FF06DBD7A /* Pods_MZReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4977F68B4BB0D0B708F668EB /* Pods_MZReaderUITests.framework */; };
+		E925A3BC0C7A762355A925E6 /* Pods_MZReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D610223388B606DA00C0CE /* Pods_MZReaderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D610223388B606DA00C0CE /* Pods_MZReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		146165B8B6CA267560D2FB24 /* Pods_MZReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		210CCE20ECC652E8CA30D36B /* Pods-MZReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZReaderTests/Pods-MZReaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		2304964B814D0CA6E23005C9 /* Pods-MZReaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReaderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZReaderUITests/Pods-MZReaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3866F62D1CD4E65800D87076 /* MZReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MZReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3866F6301CD4E65800D87076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3866F6321CD4E65800D87076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,8 +60,13 @@
 		3866F6521CD4E65800D87076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3866F6781CD514A600D87076 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		389C11A31CEFDC8200CB6164 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		389F81BB2046A06B00306DF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		389F81C320479CE400306DF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4419CE4033EF3B7A6236BB89 /* Pods-MZReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZReader/Pods-MZReader.release.xcconfig"; sourceTree = "<group>"; };
+		4977F68B4BB0D0B708F668EB /* Pods_MZReaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZReaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79C08B5FC17B85460194E59D /* Pods-MZReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZReaderTests/Pods-MZReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B257AAF048D16C3A6CD5CC /* Pods-MZReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MZReader/Pods-MZReader.debug.xcconfig"; sourceTree = "<group>"; };
+		E732FF20FDB639DAE1B8B82E /* Pods-MZReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZReaderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MZReaderUITests/Pods-MZReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389F81BC2046A06B00306DF4 /* Foundation.framework in Frameworks */,
+				5A009DCB1D7AA01A02DF3BCC /* Pods_MZReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E925A3BC0C7A762355A925E6 /* Pods_MZReaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA129E513593685FF06DBD7A /* Pods_MZReaderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +131,7 @@
 				3866F6371CD4E65800D87076 /* Assets.xcassets */,
 				3866F6391CD4E65800D87076 /* LaunchScreen.storyboard */,
 				3866F63C1CD4E65800D87076 /* Info.plist */,
+				389F81C320479CE400306DF4 /* GoogleService-Info.plist */,
 			);
 			path = MZReader;
 			sourceTree = "<group>";
@@ -141,6 +159,10 @@
 			children = (
 				A2B257AAF048D16C3A6CD5CC /* Pods-MZReader.debug.xcconfig */,
 				4419CE4033EF3B7A6236BB89 /* Pods-MZReader.release.xcconfig */,
+				79C08B5FC17B85460194E59D /* Pods-MZReaderTests.debug.xcconfig */,
+				210CCE20ECC652E8CA30D36B /* Pods-MZReaderTests.release.xcconfig */,
+				2304964B814D0CA6E23005C9 /* Pods-MZReaderUITests.debug.xcconfig */,
+				E732FF20FDB639DAE1B8B82E /* Pods-MZReaderUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -148,7 +170,10 @@
 		CBEFE5128532AC07DCE6E00B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				389F81BB2046A06B00306DF4 /* Foundation.framework */,
 				146165B8B6CA267560D2FB24 /* Pods_MZReader.framework */,
+				05D610223388B606DA00C0CE /* Pods_MZReaderTests.framework */,
+				4977F68B4BB0D0B708F668EB /* Pods_MZReaderUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3866F6551CD4E65800D87076 /* Build configuration list for PBXNativeTarget "MZReader" */;
 			buildPhases = (
+				C2E5DF8882F6DB3897DFE37A /* [CP] Check Pods Manifest.lock */,
 				3866F6291CD4E65800D87076 /* Sources */,
 				3866F62A1CD4E65800D87076 /* Frameworks */,
 				3866F62B1CD4E65800D87076 /* Resources */,
+				25B435C91A41E83593B15208 /* [CP] Embed Pods Frameworks */,
+				B0F8E4C392A2877F1AD8F181 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3866F6581CD4E65800D87076 /* Build configuration list for PBXNativeTarget "MZReaderTests" */;
 			buildPhases = (
+				84C1A98A101C2D0B188C82B2 /* [CP] Check Pods Manifest.lock */,
 				3866F63D1CD4E65800D87076 /* Sources */,
 				3866F63E1CD4E65800D87076 /* Frameworks */,
 				3866F63F1CD4E65800D87076 /* Resources */,
+				652AEB177A437CF9EC8DD66C /* [CP] Embed Pods Frameworks */,
+				931EE2A56446DBB4C804331D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3866F65B1CD4E65800D87076 /* Build configuration list for PBXNativeTarget "MZReaderUITests" */;
 			buildPhases = (
+				7A819E08C720233882CB4CC6 /* [CP] Check Pods Manifest.lock */,
 				3866F6481CD4E65800D87076 /* Sources */,
 				3866F6491CD4E65800D87076 /* Frameworks */,
 				3866F64A1CD4E65800D87076 /* Resources */,
+				5B9F9EC312EA984E859BA9ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,16 +255,16 @@
 					3866F62C1CD4E65800D87076 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 5429CA762T;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					3866F6401CD4E65800D87076 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						TestTargetID = 3866F62C1CD4E65800D87076;
 					};
 					3866F64B1CD4E65800D87076 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						TestTargetID = 3866F62C1CD4E65800D87076;
 					};
 				};
@@ -262,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				389C11A51CEFEE3C00CB6164 /* Main.storyboard in Resources */,
+				389F81C420479CE400306DF4 /* GoogleService-Info.plist in Resources */,
 				3866F63B1CD4E65800D87076 /* LaunchScreen.storyboard in Resources */,
 				3866F6381CD4E65800D87076 /* Assets.xcassets in Resources */,
 			);
@@ -282,6 +316,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25B435C91A41E83593B15208 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZReader/Pods-MZReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B9F9EC312EA984E859BA9ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZReaderUITests/Pods-MZReaderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		652AEB177A437CF9EC8DD66C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZReaderTests/Pods-MZReaderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A819E08C720233882CB4CC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84C1A98A101C2D0B188C82B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		931EE2A56446DBB4C804331D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZReaderTests/Pods-MZReaderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0F8E4C392A2877F1AD8F181 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MZReader/Pods-MZReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E5DF8882F6DB3897DFE37A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3866F6291CD4E65800D87076 /* Sources */ = {
@@ -439,7 +596,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReader;
 				PRODUCT_NAME = MZReader;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -453,56 +610,60 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReader;
 				PRODUCT_NAME = MZReader;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		3866F6591CD4E65800D87076 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C08B5FC17B85460194E59D /* Pods-MZReaderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MZReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderTests;
 				PRODUCT_NAME = MZReader;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZReader.app/MZReader";
 			};
 			name = Debug;
 		};
 		3866F65A1CD4E65800D87076 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 210CCE20ECC652E8CA30D36B /* Pods-MZReaderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MZReaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderTests;
 				PRODUCT_NAME = MZReader;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MZReader.app/MZReader";
 			};
 			name = Release;
 		};
 		3866F65C1CD4E65800D87076 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2304964B814D0CA6E23005C9 /* Pods-MZReaderUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MZReaderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderUITests;
 				PRODUCT_NAME = MZReader;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MZReader;
 			};
 			name = Debug;
 		};
 		3866F65D1CD4E65800D87076 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E732FF20FDB639DAE1B8B82E /* Pods-MZReaderUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MZReaderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinjukujohnny.MZReaderUITests;
 				PRODUCT_NAME = MZReader;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MZReader;
 			};
 			name = Release;

@@ -24,24 +24,24 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // インジケータを画面中央に設定
         indicator.center = self.view.center
         // インジケータのスタイルをグレーに設定
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         // インジケータをwebviewに設置
         webview.addSubview(indicator)
         
-        let url = NSURL(string: newsUrl)
-        let urlRequest = NSURLRequest(URL: url!)
+        let url = URL(string: newsUrl)
+        let urlRequest = URLRequest(url: url!)
         // WebViewで読み込み
         webview.loadRequest(urlRequest)
     }
     
     // Webページの読み込み開始を通知
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         // インジケータの表示アニメを開始
         indicator.startAnimating()
     }
     
     // Webページの読み込み終了を通知
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         // インジケータを停止
         indicator.stopAnimating()
     }
