@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Adjust
 
 class WebViewController: UIViewController, UIWebViewDelegate {
     // インジケータを使うための変数
@@ -19,6 +20,12 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // purchase event
+        let event:ADJEvent = ADJEvent.init(eventToken: "cho60f")!
+        event.setRevenue(1000.0, currency: "JPY")
+        Adjust.trackEvent(event)
+        
         // UIWebViewDelegageの参照先を設定
         webview.delegate = self
         // インジケータを画面中央に設定
@@ -32,6 +39,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         let urlRequest = URLRequest(url: url!)
         // WebViewで読み込み
         webview.loadRequest(urlRequest)
+        
     }
     
     // Webページの読み込み開始を通知

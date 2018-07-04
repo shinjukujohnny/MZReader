@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAnalytics
 import GoogleMobileAds
+import Adjust
 
 class ViewController: UIViewController, XMLParserDelegate, UITableViewDataSource, UITableViewDelegate, GADInterstitialDelegate {
     
@@ -59,6 +60,10 @@ class ViewController: UIViewController, XMLParserDelegate, UITableViewDataSource
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3553872227246761/3228241644")
         interstitial.delegate = self
         interstitial.load(GADRequest())
+        
+        // level up event
+        var event:ADJEvent = ADJEvent.init(eventToken: "pqb3cq")!
+        Adjust.trackEvent(event)
     }
 
     override func didReceiveMemoryWarning() {

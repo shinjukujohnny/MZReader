@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AdjustDelegate {
         //let gai = GAI.sharedInstance()
         //gai.trackUncaughtExceptions = true  // report uncaught exceptions
         //gai.logger.logLevel = GAILogLevel.Verbose  // remove before app release
+        var adjustConfig:ADJConfig = ADJConfig.init(appToken: "owdngfgc70g0", environment: ADJEnvironmentProduction)!
+        Adjust.appDidLaunch(adjustConfig)
         return true
     }
 
