@@ -43,10 +43,10 @@ class ViewController: UIViewController, XMLParserDelegate, UITableViewDataSource
         // Table Viewのタップ時のdelegate先を指定
         table.delegate = self
         
-        let url = URL(string: "http://rss.rssad.jp/rss/markezine/new/20/index.xml")
+        let url = URL(string: "https://markezine.jp/rss/new/20/index.xml")
         let task = URLSession.shared.dataTask(with: url!, completionHandler: {(data, response, error) in
             if data == nil {
-                print("dataTaskWithRequest error: \(error)")
+                print("dataTaskWithRequest error")
                 return
             }
             
